@@ -1,8 +1,9 @@
-div{
+.header{
     display: flex;
     justify-content: space-between;
+    margin: 25px 100px;
 }
-nav{
+.header nav{
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
@@ -10,6 +11,6 @@ nav{
     display: flex;
     gap: 20px; 
 }
-nav a{
+.header nav a{
     color: black;
 }

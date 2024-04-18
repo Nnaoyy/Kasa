@@ -1,9 +1,21 @@
 import Banner from "../components/banner"
-
+import  data  from "../datas/logements.json"
+import { Link } from 'react-router-dom'
+import LogementCard from "../components/logementCard"
+import "./home.css"
 
 function Home (){
     return (
-        <Banner title="Chez vous, partout et ailleurs"/>
+        <>
+            <Banner title="Chez vous, partout et ailleurs" page="home"/>
+            <div className="cardContainer">
+                {data.map((house)=> (
+                    <Link to={`logement/${house.id}`} key={house.id}>
+                        <LogementCard title={house.title} image={house.cover}/>
+                    </Link>
+                ))}
+            </div>
+        </>
     )
 }
 

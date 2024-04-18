@@ -4,14 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import Error from './components/error'
-import APropos from "./pages/a-propos";
+import AboutUs from "./pages/aboutUs";
 import Home from "./pages/home";
-import Logement from "./pages/fiche-logement";
+import Logement from "./pages/logement";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    errorElement: <Error/>,
     children: [
       {
         path: "",
@@ -19,11 +20,15 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <APropos/>
+        element: <AboutUs/>
       },
       {
-        path: "logement",
+        path: "logement/:houseId",
         element: <Logement/>
+      },
+      {
+        path: "*",
+        element: <Error/>
       }
     ]
   },

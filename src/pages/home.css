@@ -1,0 +1,11 @@
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+    padding: 56px 50px;
+    position: relative;
+    margin: 30px 100px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+}
