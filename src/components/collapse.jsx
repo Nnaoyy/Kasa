@@ -1,25 +1,7 @@
-
-
-// function Collapse ({title, content}) {
-
-
-//     return (
-//         <>
-//             <div>
-//                 {title}
-//             </div>
-//             <div >
-//                 {content}
-//             </div>
-//         </>
-//     )
-// }
-
-// export default Collapse;
-
-import "./collapse.css";
 import DropArrow from "../assets/arrowCollapse.svg";
 import { useState } from "react";
+
+import "./collapse.css";
 
 function Collapse({ title, text }) {
   const [toggle, setToggle] = useState(false);
