@@ -1,15 +1,16 @@
 import Banner from "../components/banner"
-import Collapse from "../components/collapse"
+import Collapse from "../components/collapse.jsx"
 import { aboutList } from "../datas/aboutList"
 
+import "./aboutUs.css"
 
 function AboutUs (){
     return (
         <>
             <Banner page="aboutUs"/>
-            <div>
+            <div className="aboutContainer">
                 {aboutList.map((about)=>(
-                    <Collapse title={about.title} content={about.content}/>
+                    <Collapse title={about.title} text={about.content} key={about.title}/>
                 ))} 
             </div>
         </>

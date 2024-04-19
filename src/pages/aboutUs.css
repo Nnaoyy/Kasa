@@ -1,0 +1,6 @@
+.aboutContainer{
+    margin: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
