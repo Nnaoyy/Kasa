@@ -10,16 +10,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.banner h1{
-    font-family: Montserrat;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 68.45px;
-    text-align: left;
-    color: white;
 
+    h1{
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 68.45px;
+        text-align: left;
+        color: white;
+    
+    }
 }
+
 .banner-home{
     background-image: url('/src/assets/banner-home.png');
 }

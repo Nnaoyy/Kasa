@@ -1,4 +1,4 @@
-import "./logementCard.css"
+import "./logementCard.scss"
 
 function LogementCard({title, image}) {
     return (

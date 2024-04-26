@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 import App from "./App";
 import Error from './components/error'
 import AboutUs from "./pages/aboutUs";
 import Home from "./pages/home";
 import Logement from "./pages/logement";
 
+import "./index.scss";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    errorElement: <Error/>,
     children: [
       {
         path: "",
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
       },
       {
         path: "logement/:houseId",
-        element: <Logement/>
+        element: <Logement/>,
+        errorElement: <Error/>
       },
       {
         path: "*",

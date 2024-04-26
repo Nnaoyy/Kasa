@@ -2,7 +2,7 @@ import Banner from "../components/banner"
 import  data  from "../datas/logements.json"
 import { Link } from 'react-router-dom'
 import LogementCard from "../components/logementCard"
-import "./home.css"
+import "./home.scss"
 
 function Home (){
     return (

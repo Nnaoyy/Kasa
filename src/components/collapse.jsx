@@ -1,18 +1,21 @@
 import DropArrow from "../assets/arrowCollapse.svg";
 import { useState } from "react";
 
-import "./collapse.css";
+import "./collapse.scss";
 
 function Collapse({ title, text }) {
   const [toggle, setToggle] = useState(false);
-  let content;
+  
+  function getContent(){
+    let content;
 
-  if (Array.isArray(text)) {
-    content = text.map((word, index) => <p key={index}>{word}</p>);
-  } else {
-    content = <p>{text}</p>;
-  }
-
+    if (Array.isArray(text)) {
+      content = <ul>{text.map((word, index) => <li key={index}>{word}</li>)}</ul>;
+    } else {
+      content = <p>{text}</p>;
+    }
+    return content;
+}
   const handleToggle = () => {
     setToggle(!toggle);
   };
@@ -28,7 +31,7 @@ function Collapse({ title, text }) {
           alt="arrow svg"
         />
       </div>
-      <div className={`content ${toggle ? "content-show" : ""}`}>{content}</div>
+      <div className={`content ${toggle ? "content-show" : ""}`}>{getContent()}</div>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.logementCard{
+    width:340px;
+    height: 340px;
+    border-radius:10px;
+    display: flex;
+    position: relative;
+
+    img{
+        object-fit: cover;
+        height: 340px;
+        width: 100%;
+    }
+    p{
+        bottom: 20px;
+        left: 20px;
+        max-width: 80%;
+        position: absolute;
+        z-index: 2;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25.67px;
+        text-align: left;
+        color: white;
+    }
+}

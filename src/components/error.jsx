@@ -1,12 +1,14 @@
 import { useRouteError } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
-import "./error.css";
+
+import "./error.scss";
 
 function Error() {
   const error = useRouteError();
   console.error(error);
     return (
+        <>
         <div className="error">
             <p>404</p>
             <span>Oups! La page que vous demandez n'existe pas</span>
@@ -14,6 +16,7 @@ function Error() {
                 Retourner sur la page d'accueil
             </Link>
         </div>
+        </>
     )
 }
 

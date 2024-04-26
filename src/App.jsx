@@ -2,7 +2,7 @@ import Header from './components/header.jsx'
 import { Outlet } from 'react-router-dom'
 import Footer from './components/footer.jsx'
 
-import './App.css'
+import './App.scss'
 
 
 function App() {

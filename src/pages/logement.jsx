@@ -1,16 +1,15 @@
 import Caroussel from "../components/caroussel";
 import Collapse from "../components/collapse";
 import  data  from "../datas/logements.json"
-import { useParams, useNavigate } from "react-router-dom";
-
-import "./logement.css";
+import { useParams } from "react-router-dom";
 import Stars from "../components/stars.jsx";
+
+import "./logement.scss";
 
 function Logement (){
     const url = useParams();
 
     const foundItem = data.find((item) => item.id === url.houseId);
-
 
     return (
         <div className="logement">

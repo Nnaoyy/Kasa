@@ -2,7 +2,7 @@ import Banner from "../components/banner"
 import Collapse from "../components/collapse.jsx"
 import { aboutList } from "../datas/aboutList"
 
-import "./aboutUs.css"
+import "./aboutUs.scss"
 
 function AboutUs (){
     return (
