@@ -14,27 +14,30 @@ function Logement (){
     return (
         <div className="logement">
             <Caroussel pictures={foundItem.pictures} />
-            <div className="row">
+            <div className="informations">
+            <div className="localisationAndTag">
                 <div className="localisation">
                     <p>{foundItem.title}</p>
                     <span>{foundItem.location}</span>
                 </div>
-                <div className="identity">
-                    <p>{foundItem.host.name}</p>
-                    <img src={foundItem.host.picture} alt="photo de profil"/>
-                </div>
-            </div>
-            <div className="row">
                 <div className="tag">
                 {foundItem.tags.map((tag)=>(
                     <p key={tag}>{tag}</p>
                 ))}
                 </div>
+                
+            </div>
+            <div className="identityAndStars">
+            <div className="identity">
+                    <p>{foundItem.host.name}</p>
+                    <img src={foundItem.host.picture} alt="photo de profil"/>
+                </div>
                 <div className="star">
                    <Stars number={foundItem.rating}/>
                 </div>
             </div>
-            <div className="row logementCollapse">
+            </div>
+            <div className="logementCollapse">
                 <Collapse title="Description" text={foundItem.description}/>
                 <Collapse title="Équipements" text={foundItem.equipments}/>
             </div>

@@ -1,10 +1,11 @@
+@import '../styles/variables.scss';
+
 .error{
-    color:#FF6060;
+    color: $color-primary;
     display: flex;
     flex-direction: column;
 
     p{
-        font-family: Montserrat;
         font-size: 288px;
         font-weight: 700;
         line-height: 410.69px;
@@ -12,20 +13,35 @@
         margin: 0;
     }
     span{
-        font-family: Montserrat;
         font-size: 36px;
         font-weight: 500;
         line-height: 51.34px;
         text-align: center;
     }
     a{
-        font-family: Montserrat;
-        font-size: 18px;
         font-weight: 500;
         line-height: 25.67px;
         text-align: center;
         color: black;
         margin: 100px 0;
         text-decoration: underline
+    }
+}
+
+@media (width <= 768px){
+    .error{
+        p{
+            font-size: 96px;
+            line-height: 136.9px;
+        }
+        span{
+            font-size: 18px;
+            line-height: 25.67px;
+            margin: 0 40px;                       
+        }
+        a{
+            font-size: 14px;
+            line-height: 19.96px;
+        }
     }
 }

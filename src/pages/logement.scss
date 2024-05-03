@@ -1,74 +1,141 @@
+@import '../styles/variables.scss';
+
 .logement{
     margin:0 100px;
 
     .caroussel{
         margin-bottom: 30px;
     }
-    .row{
-        display:flex;
-        flex-direction: row;
+    .informations{
+        display: flex;
         justify-content: space-between;
-        gap: 50px;
 
-        .localisation{
-            p{
-                font-family: Montserrat;
-                font-size: 36px;
-                font-weight: 500;
-                line-height: 51.34px;
-                text-align: left;
-                color:#FF6060;  
-                margin: 0;  
+        .localisationAndTag{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .localisation{
+                p{
+                    font-size: 36px;
+                    font-weight: 500;
+                    line-height: 51.34px;
+                    text-align: left;
+                    color: $color-primary;  
+                    margin: 0;  
+                }
+                span{
+                    font-weight: 500;
+                    line-height: 25.67px;
+                    text-align: left;
+                }
             }
-            span{
-                font-family: Montserrat;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 25.67px;
-                text-align: left;
+            .tag{
+                display: flex;
+                gap: 10px;
+    
+                p{
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 19.96px;
+                    text-align: center;
+                    color: white;
+                    width: 115px;
+                    height: 22px;
+                    padding-top: 3px;
+                    border-radius: 10px;
+                    background-color: $color-primary;
+                }
             }
         }
-
-        .identity{
-            display: flex;
-
-            p{
-                font-family: Montserrat;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 25.67px;
-                text-align: right;
-                color:#FF6060;
-                width: 50%;
+        .identityAndStars{
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+            .identity{
+                display: flex;
+    
+                p{
+                    font-weight: 500;
+                    line-height: 25.67px;
+                    text-align: right;
+                    color: $color-primary;
+                    width: 45%;
+                }
+                img{
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    margin-left: 10px;
+                }
             }
-            img{
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                margin-left: 10px;
-            }
-        }
-        .tag{
-            display: flex;
-            gap: 10px;
-
-            p{
-                font-family: Montserrat;
-                font-size: 14px;
-                font-weight: 700;
-                line-height: 19.96px;
-                text-align: center;
-                color: white;
-                width: 115px;
-                height: 22px;
-                padding-top: 3px;
-                border-radius: 10px;
-                background-color: #FF6060;
+            .star{
+                margin-bottom:14px
             }
         }
     }
+    
+    
     .logementCollapse{
+        display: flex;
+        gap: 50px;
         margin-bottom: 50px;
     }
 
+}
+@media (width <=768px){
+    .logement{
+        margin:0 20px;
+
+        .informations{
+            flex-direction: column;
+            .localisationAndTag{    
+                .localisation{
+                    p{
+                        font-size: 18px;
+                        line-height: 25.67px;
+                    }
+                    span{
+                        font-size: 14px;
+                        line-height: 19.96px;
+                    }
+                }
+                .tag{
+                    p{
+                        font-size: 10px;
+                        line-height: 14.26px;
+                        width: 84px;
+                        height: 18px;
+
+                    }
+                }
+            }
+            .identityAndStars{
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .identity{
+                    p{
+                        font-size: 12px;
+                        line-height: 17.11px;
+                        margin: 0;
+                    }
+                    img{
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+                .star{
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                }
+            }
+        }
+        .logementCollapse{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 }

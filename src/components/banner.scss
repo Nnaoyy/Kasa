@@ -12,7 +12,6 @@
     background-size: cover;
 
     h1{
-        font-family: Montserrat;
         font-size: 48px;
         font-weight: 700;
         line-height: 68.45px;
@@ -28,4 +27,23 @@
 
 .banner-aboutUs{
     background-image: url('/src/assets/banner-about-us.png');  
+}
+
+@media (width <= 768px){
+    .banner{
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (width <= 500px){
+    .banner{
+        height:111px;
+
+        h1{
+            font-size:24px;
+            line-height: 24px;
+            padding-left: 20px;
+        }
+    }
 }
