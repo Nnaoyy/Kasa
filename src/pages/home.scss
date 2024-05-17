@@ -10,6 +10,11 @@
     margin: 30px 100px;
     background-color: $color-back;
     border-radius: 25px;
+
+    a{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (width < 1450px ){
